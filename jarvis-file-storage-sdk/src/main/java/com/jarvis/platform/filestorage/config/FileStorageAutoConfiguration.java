@@ -14,7 +14,7 @@ import io.minio.MinioClient;
 
 /**
  *
- * @author qiucs
+ * @author Doug Wang
  * @version 1.0.0 2022年7月13日
  */
 @Configuration

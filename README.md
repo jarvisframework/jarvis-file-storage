@@ -20,4 +20,4 @@ jarvis-file-storage
 
 ## 更新日志
 
-### v1.0.0 2023.1.1
+### v1.0.0-SNAPSHOT 2023.1.1
