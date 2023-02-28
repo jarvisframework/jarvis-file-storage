@@ -16,14 +16,14 @@ public interface FileStorageSdkService {
     /**
      * 创建存储位置
      *
-     * @param location 存储位置 如：archive-type
+     * @param location 存储位置 如：jarvis-type
      */
     void makeLocation(String location);
 
     /**
      * 创建存储下目录
      *
-     * @param location 存储位置 如：archive-type
+     * @param location 存储位置 如：jarvis-type
      * @param dir      存储下目录 如：data/logs/
      */
     void makedir(String location, String dir);
@@ -31,7 +31,7 @@ public interface FileStorageSdkService {
     /**
      * 上传文件
      *
-     * @param location 存储位置 如：archive-type
+     * @param location 存储位置 如：jarvis-type
      * @param path     存储下的相对路径，如： sh001/2000/1/001/xxx.pdf
      * @param filename 上传的文件名称（绝对路径）
      * @return boolean
@@ -41,7 +41,7 @@ public interface FileStorageSdkService {
     /**
      * 上传文件
      *
-     * @param location 存储位置 如：archive-type
+     * @param location 存储位置 如：jarvis-type
      * @param path     存储下的相对路径，如： sh001/2000/1/001/xxx.pdf
      * @param file     上传的文件对象
      * @return boolean
@@ -51,7 +51,7 @@ public interface FileStorageSdkService {
     /**
      * 上传文件
      *
-     * @param location 存储位置 如：archive-type
+     * @param location 存储位置 如：jarvis-type
      * @param path     存储下的相对路径，如： sh001/2000/1/001/xxx.pdf
      * @param is       上传的文件流
      * @return boolean
@@ -61,7 +61,7 @@ public interface FileStorageSdkService {
     /**
      * 下载文件流（分段下载），注：如果是文件流，则确保文件对应文件夹的已存在，否则下载不成功
      *
-     * @param location 存储位置 如：archive-type
+     * @param location 存储位置 如：jarvis-type
      * @param path     存储下的相对路径，如： sh001/2000/1/001/xxx.pdf
      * @param os       输出流（流关闭，需要调用者手动关闭）
      */
@@ -70,7 +70,7 @@ public interface FileStorageSdkService {
     /**
      * 下载文件流（分段下载），注：如果是文件流，则确保文件对应文件夹的已存在，否则下载不成功
      *
-     * @param location 存储位置 如：archive-type
+     * @param location 存储位置 如：jarvis-type
      * @param path     存储下的相对路径，如： sh001/2000/1/001/xxx.pdf
      * @param start    开始位置
      * @param end      结束位置
@@ -81,7 +81,7 @@ public interface FileStorageSdkService {
     /**
      * 下载文件流
      *
-     * @param location 存储位置 如：archive-type
+     * @param location 存储位置 如：jarvis-type
      * @param path     存储下的相对路径，如： sh001/2000/1/001/xxx.pdf
      */
     InputStream download(String location, String path);
@@ -89,7 +89,7 @@ public interface FileStorageSdkService {
     /**
      * 下载文件（注：确保文件对应文件夹的已存在，否则下载不成功）
      *
-     * @param location         存储位置 如：archive-type
+     * @param location         存储位置 如：jarvis-type
      * @param path             存储下的相对路径，如： sh001/2000/1/001/xxx.pdf
      * @param downloadFilePath 下载下来的文件路径 如：C:/temp/aa.pdf
      * @return File
@@ -99,7 +99,7 @@ public interface FileStorageSdkService {
     /**
      * 删除
      *
-     * @param location 存储位置 如：archive-type
+     * @param location 存储位置 如：jarvis-type
      * @param paths    存储下的相对路径，如： sh001/2000/1/001/xxx.pdf
      */
     void delete(String location, String... paths);
@@ -107,7 +107,7 @@ public interface FileStorageSdkService {
     /**
      * 相同存储间的复制
      *
-     * @param location 存储位置 如：archive-type
+     * @param location 存储位置 如：jarvis-type
      * @param path     存储下的相对路径，如： sh001/2000/1/001/xxx.pdf
      * @param toPath   存储下复制到的相对路径，如： sh002/2000/1/001/xxx.pdf
      */
@@ -116,9 +116,9 @@ public interface FileStorageSdkService {
     /**
      * 不同存储间的复制
      *
-     * @param location   存储位置 如：archive-tmp
+     * @param location   存储位置 如：jarvis-tmp
      * @param path       存储下的相对路径，如： sh001/2000/1/001/xxx.pdf
-     * @param toLocation 复制到的存储 如：archive-type
+     * @param toLocation 复制到的存储 如：jarvis-type
      * @param toPath     存储下复制到的相对路径，如： sh002/2000/1/001/xxx.pdf
      */
     void copy(String location, String path, String toLocation, String toPath);
@@ -126,7 +126,7 @@ public interface FileStorageSdkService {
     /**
      * 相同存储间的移动
      *
-     * @param location 存储位置 如：archive-type
+     * @param location 存储位置 如：jarvis-type
      * @param path     存储下的相对路径，如： sh001/2000/1/001/xxx.pdf
      * @param toPath   存储下移动到的相对路径，如： sh002/2000/1/001/xxx.pdf
      */
@@ -135,9 +135,9 @@ public interface FileStorageSdkService {
     /**
      * 不同存储间的移动
      *
-     * @param location   存储位置 如：archive-tmp
+     * @param location   存储位置 如：jarvis-tmp
      * @param path       存储下的相对路径，如： sh001/2000/1/001/xxx.pdf
-     * @param toLocation 移动到的存储 如：archive-type
+     * @param toLocation 移动到的存储 如：jarvis-type
      * @param toPath     存储下移动到的相对路径，如： sh002/2000/1/001/xxx.pdf
      */
     void move(String location, String path, String toLocation, String toPath);
@@ -145,9 +145,9 @@ public interface FileStorageSdkService {
     /**
      * 合并文件，合并完后会删除原目录及下面文件
      *
-     * @param location   存储位置 如：archive-tmp
+     * @param location   存储位置 如：jarvis-tmp
      * @param dir        存储下的相对目录路径，如： sh001/2000/1/001/
-     * @param toLocation 合并到的存储 如：archive-type
+     * @param toLocation 合并到的存储 如：jarvis-type
      * @param toPath     存储下合并到的相对路径，如： sh002/2000/1/001/xxx.pdf
      * @param comparator 对目录dir下的文件进行排序
      */
@@ -166,7 +166,7 @@ public interface FileStorageSdkService {
      *  结果：b1/, b2/, t1.txt （文件夹以'/'结束）
      * </pre>
      *
-     * @param location 存储位置 如：archive-tmp
+     * @param location 存储位置 如：jarvis-tmp
      * @return List
      */
     List<String> list(String location);
@@ -184,7 +184,7 @@ public interface FileStorageSdkService {
      *  结果：b1/, b2/, t1.txt （文件夹以'/'结束）
      * </pre>
      *
-     * @param location 存储位置 如：archive-tmp
+     * @param location 存储位置 如：jarvis-tmp
      * @param dir      存储下的相对目录路径，如： sh001/2000/1/001/
      * @return List
      */
