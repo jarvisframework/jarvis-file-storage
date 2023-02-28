@@ -26,7 +26,7 @@ public class FileStorageAutoConfiguration {
         return new LocalStorageSdkServiceImpl();
     }
 
-    @ConditionalOnProperty(prefix = "gdda.fs", name = "type", havingValue = "MINIO")
+    @ConditionalOnProperty(prefix = "jarvis.fs", name = "type", havingValue = "MINIO")
     @Bean
     @Primary
     FileStorageSdkService minioFileStorageSdkService(FileStorageProperties properties) {

@@ -16,7 +16,7 @@ import lombok.ToString;
 @Setter
 @Getter
 @ToString
-@ConfigurationProperties(prefix = "gdda.fs")
+@ConfigurationProperties(prefix = "jarvis.fs")
 public class FileStorageProperties {
 
     /** 存储类型：LOCAL/MINIO */
