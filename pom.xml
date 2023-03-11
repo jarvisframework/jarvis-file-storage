@@ -30,11 +30,26 @@
         </dependencies>
     </dependencyManagement>
 
+    <!-- 发布仓库 -->
+    <!-- 中心仓库 -->
+    <distributionManagement>
+        <repository>
+            <id>maven-releases</id>
+            <name>maven-releases</name>
+            <url>http://ganch.tk:8081/repository/maven-releases/</url>
+        </repository>
+        <snapshotRepository>
+            <id>maven-snapshots</id>
+            <name>maven-snapshots</name>
+            <url>http://ganch.tk:8081/repository/maven-snapshots/</url>
+        </snapshotRepository>
+    </distributionManagement>
+
     <!-- 仓库地址 -->
     <repositories>
         <repository>
-            <id>cesgroup</id>
-            <url>http://nexus.jarvis.com.cn/content/groups/public/</url>
+            <id>maven-public</id>
+            <url>http://ganch.tk:8081/repository/maven-public/</url>
             <releases>
                 <enabled>true</enabled>
             </releases>
@@ -61,8 +76,8 @@
     </repositories>
     <pluginRepositories>
         <pluginRepository>
-            <id>cesgroup</id>
-            <url>http://nexus.jarvis.com.cn/content/groups/public/</url>
+            <id>maven-public</id>
+            <url>http://ganch.tk:8081/repository/maven-public/</url>
         </pluginRepository>
     </pluginRepositories>
 
